@@ -1,14 +1,13 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';  // Для расширенных матчеров Jest
+import '@testing-library/jest-dom/extend-expect';
 
 import WidgetModal from '../src/Components/WidgetModal';
 import { Step } from '../src/interfaces/Step';
 
 import steps from '../__fixtures__/steps';
 
-
-test('отображение и закрытие модального окна', () => {
+test('Open and close modal window', () => {
   render(<WidgetModal steps={steps as Step[]} />);
   
   // Проверяем, что кнопка "Открыть Чат" присутствует на экране
@@ -28,5 +27,3 @@ test('отображение и закрытие модального окна',
   // Проверяем, что модальное окно закрывается
   expect(screen.queryByText(/Виртуальный помощник/i)).not.toBeInTheDocument();
 });
-
-// Другие тесты...
