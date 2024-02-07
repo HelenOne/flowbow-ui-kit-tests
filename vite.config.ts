@@ -27,5 +27,5 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/react-flowbot-ui-kit/'
+  base: '/flowbow-ui-kit-tests/'
 })
