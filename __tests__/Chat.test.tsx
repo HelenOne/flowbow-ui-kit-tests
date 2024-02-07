@@ -8,10 +8,6 @@ import Chat from '../src/Components/Chat';
 import steps from '../__fixtures__/steps';
 import { Step } from '../src/interfaces/Step';
 
-import { test, expect } from '@jest/globals'
-
-import '@testing-library/jest-dom';
-
 test('Init state', () => {
   render(<Chat steps={steps as Step[]} />);
   expect(screen.getByText(/Привет! Я ваш виртуальный помощник/i)).toBeInTheDocument();

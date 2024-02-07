@@ -7,10 +7,6 @@ import { Step } from '../src/interfaces/Step';
 
 import steps from '../__fixtures__/steps';
 
-import { test, expect } from '@jest/globals';
-
-import '@testing-library/jest-dom';
-
 
 test('отображение и закрытие модального окна', () => {
   render(<WidgetModal steps={steps as Step[]} />);
